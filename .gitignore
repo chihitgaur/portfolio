@@ -3,6 +3,10 @@ __pycache__/
 .idea
 *.py[cod]
 *$py.class
+.gitignore
+myportfolio/__pycache__
+portfolio/__pycache__
+portfolio/migrations/__pycache__
 
 # C extensions
 *.so
