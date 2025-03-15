@@ -1,0 +1,255 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block title %}Technology{% endblock %}
+
+{% block content %}
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-center mb-8">Technology</h1>
+        <p class="text-lg text-center mb-12">Here's what I typically work with.</p>
+
+        <!-- Languages Section -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Programming Languages</h2>
+            <div class="grid grid-cols-1 md:grid-cols-1 gap-4">
+                <div class="bg-blue-700 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{% static python_image_path %}" alt="Python" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-blue-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tools Section -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Automation & RPA</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-green-800 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static selenium_image_path%}" alt="Selenium" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-green-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">Selenium</span>
+                    </div>
+                </div>
+                <div class="bg-green-800 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static powerautomate_image_path%}" alt="Powerautomate" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-green-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">Power Automate</span>
+                    </div>
+                </div>
+                <div class="bg-green-800 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static uipath_image_path%}" alt="uipath" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-green-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">UI Path</span>
+                    </div>
+                </div>
+                <div class="bg-green-800 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static powerplatform_image_path%}" alt="powerplatform" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-green-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">Power Platform</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI & NLP Section -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">AI & NLP</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="bg-purple-900 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static genai_image_path%}" alt="genai" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-purple-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">Generative AI</span>
+                    </div>
+                </div>
+                <div class="bg-purple-900 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static langchain_image_path%}" alt="langchain" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-purple-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">LangChain</span>
+                    </div>
+                </div>
+                <div class="bg-purple-900 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static bert_image_path%}" alt="bert" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-purple-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">BERT Model</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Framework Section -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Frameworks</h2>
+            <div class="grid grid-cols-2 md:grid-cols-2 gap-4">
+                <div class="bg-gray-700 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static django_image_path%}" alt="django" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-gray-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">Django</span>
+                    </div>
+                </div>
+                <div class="bg-gray-700 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static flask_image_path%}" alt="Flask" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-gray-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">Flask</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Frontend Section -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Frontend</h2>
+            <div class="grid grid-cols-2 md:grid-cols-2 gap-4">
+                <div class="bg-teal-600 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static html_image_path%}" alt="HTML" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-teal-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">HTML</span>
+                    </div>
+                </div>
+                <div class="bg-teal-600 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static tailwind_image_path%}" alt="Tailwind CSS" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-teal-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">Tailwind CSS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Version Control & OS Section -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Version Control & OS</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-red-700 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static git_image_path%}" alt="git" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-red-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">GIT</span>
+                    </div>
+                </div>
+                <div class="bg-red-700 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static github_image_path%}" alt="github" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-red-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">Github</span>
+                    </div>
+                </div>
+                <div class="bg-red-700 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static linux_image_path%}" alt="linux" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-red-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">Linux (Ubuntu)</span>
+                    </div>
+                </div>
+                <div class="bg-red-700 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static windows_image_path%}" alt="Windows" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-red-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">Windows</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  Cloud & DevOps Section -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Cloud & DevOps</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-violet-900 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static docker_image_path%}" alt="docker" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-violet-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">Docker</span>
+                    </div>
+                </div>
+                <div class="bg-violet-900 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static kubernetes_image_path%}" alt="Kubernetes" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-violet-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">Kubernetes</span>
+                    </div>
+                </div>
+                <div class="bg-violet-900 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static jenkins_image_path%}" alt="Jenkins" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-violet-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">Jenkins</span>
+                    </div>
+                </div>
+                <div class="bg-violet-900 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static devops_image_path%}" alt="Azure DEVOPS" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-violet-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">Azure DEVOPS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Libraries Section -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">LIBRARIES</h2>
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-4">
+                <div class="bg-emerald-800 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static pandas_image_path%}" alt="Pandas" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-emerald-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">Pandas</span>
+                    </div>
+                </div>
+                <div class="bg-emerald-800 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static numpy_image_path%}" alt="NumPy" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-emerald-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">Numpy</span>
+                    </div>
+                </div>
+                <div class="bg-emerald-800 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static threading_image_path%}" alt="Threading" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-emerald-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">Threading</span>
+                    </div>
+                </div>
+                <div class="bg-emerald-800 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static multiprocessing_image_path%}" alt="Multiprocessing" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-emerald-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">MultiProcessing</span>
+                    </div>
+                </div>
+                <div class="bg-emerald-800 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static beautifulsoup_image_path%}" alt="Beautiful Soup" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-emerald-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">Beautiful Soup</span>
+                    </div>
+                </div>
+                <div class="bg-emerald-800 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static tensorflow_image_path%}" alt="TensorFlow" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-emerald-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">TensorFlow</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+                <div class="bg-emerald-800 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static pillow_image_path%}" alt="Pillow" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-emerald-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">Pillow</span>
+                    </div>
+                </div>
+                <div class="bg-emerald-800 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static poppler_image_path%}" alt="Poppler" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-emerald-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">Poppler</span>
+                    </div>
+                </div>
+                <div class="bg-emerald-800 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{%static fitz_image_path%}" alt="Fitz" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-emerald-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">Fitz</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  API Tools Section -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">API Tools</h2>
+            <div class="grid grid-cols-1 md:grid-cols-1 gap-4">
+                <div class="bg-rose-800 p-4 rounded-lg shadow-md text-center relative group h-48 overflow-hidden">
+                    <img src="{% static postman_image_path %}" alt="Postman" class="w-32 h-32 mx-auto mt-2 object-contain">
+                    <div class="absolute inset-0 bg-rose-100 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-black text-2xl font-bold">Postman</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

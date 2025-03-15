@@ -1,0 +1,133 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block title %}Projects | My Portfolio{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center mb-5">Projects</h1>
+    <p class="text-left mb-5">Below are key projects I've worked on throughout my career, showcasing my expertise in automation, Python development, and RPA solutions.</p>
+
+    <!-- Simple list of projects with basic toggle functionality -->
+    <div class="project-list">
+        <!-- Project 1 -->
+        <div class="project-item mb-3">
+            <div class="project-header d-flex justify-content-between align-items-center p-3" onclick="toggleProject('project1')">
+                <h3 class="m-0 fs-5 text-start">1. EHR Patient Data Extraction</h3>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div id="project1" class="project-content p-3 text-justify" style="display: none;">
+                <p><strong>Technologies used:</strong> Python, Selenium, Threading, Pandas</p>
+                <p><strong>About project:</strong> Developed an automated system to extract patient data for eligibility verification, ensuring data accuracy and real-time reporting.</p>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-item mb-2">
+            <div class="project-header d-flex justify-content-between align-items-center p-3" onclick="toggleProject('project2')">
+                <h3 class="m-0 fs-5 text-start">2. EHR/PMS Automated EOB Download & Charge Entry</h3>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div id="project2" class="project-content p-3 text-justify" style="display: none;">
+                <p><strong>Technologies used:</strong> Python, Fitz, Pandas, Data Processing</p>
+                <p><strong>About project:</strong> Utilized Python's inbuilt libraries to automate the downloading and data extraction of Explanation of Benefits (EOB) documents, improving data management and performing charge entries with high precision.</p>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-item mb-3">
+            <div class="project-header d-flex justify-content-between align-items-center p-3" onclick="toggleProject('project3')">
+                <h3 class="m-0 fs-5 text-start">3. EHR/PMS Eligibility Verification & Charge Entry Automation</h3>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div id="project3" class="project-content p-3 text-justify" style="display: none;">
+                <p><strong>Technologies used:</strong> Power Automate, SharePoint, Azure Key Vault</p>
+                <p><strong>About project:</strong> Automated the eligibility verification process and streamlined charge entry workflows, resulting in a 90% reduction in manual processing time, improving accuracy, and minimizing errors. The automation included downloading input files from SharePoint and uploading processed files back to SharePoint, ensuring secure and centralized storage for seamless data management. Additionally, the solution utilized Azure Key Vault to securely fetch credentials, enhancing security and compliance.</p>
+            </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-item mb-3">
+            <div class="project-header d-flex justify-content-between align-items-center p-3" onclick="toggleProject('project4')">
+                <h3 class="m-0 fs-5 text-start">4. EHR/PMS Denial EOB Download</h3>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div id="project4" class="project-content p-3 text-justify" style="display: none;">
+                <p><strong>Technologies used:</strong> UiPath, Orchestrator, SharePoint</p>
+                <p><strong>About project:</strong> Automated the download of Denial files, reducing manual intervention by 98%, saving substantial processing time, and increasing error efficiency by ensuring reliable and accurate data retrieval. The solution also included uploading files to SharePoint for secure and centralized access by Business Team.</p>
+            </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-item mb-3">
+            <div class="project-header d-flex justify-content-between align-items-center p-3" onclick="toggleProject('project5')">
+                <h3 class="m-0 fs-5 text-start">5. Desktop Automation Solutions Initiative</h3>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div id="project5" class="project-content p-3 text-justify" style="display: none;">
+                <p><strong>Technologies used:</strong> Power Automate, Project Leadership, Process Optimization</p>
+                <p><strong>About project:</strong> Conducted extensive research and Proof of Concept (POC) for implementing desktop automation using Power Automate, addressing complex manual processes. Took complete ownership of the project, including conceptualization, development, testing, and deployment, ensuring seamless workflow automation. Collaborated with cross-functional teams to drive adoption and streamline operations, reducing manual processing time by 40% and improving efficiency.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact CTA -->
+    <div class="text-center mb-5 mt-5">
+        <p class="lead">Interested in collaborating on a project or learning more about my work?</p>
+        <a href="{% url 'contact' %}" class="btn btn-primary btn-lg text-blue-500">Get in Touch</a>
+    </div>
+</div>
+
+<style>
+    /* Custom styling for dark theme compatibility */
+    .project-header {
+        background-color: rgba(255, 255, 255, 0.05);
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .project-header:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .project-content {
+        background-color: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: none;
+        border-radius: 0 0 5px 5px;
+        color: #fff;
+    }
+
+    .toggle-icon {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    /* Ensure text alignment */
+    .text-start {
+        text-align: left !important;
+    }
+</style>
+
+<script>
+    function toggleProject(projectId) {
+        var content = document.getElementById(projectId);
+        var header = content.previousElementSibling;
+        var icon = header.querySelector('.toggle-icon');
+
+        if (content.style.display === "none") {
+            content.style.display = "block";
+            icon.textContent = "-";
+            // Add rounded corners only to the top of header when expanded
+            header.style.borderRadius = "5px 5px 0 0";
+        } else {
+            content.style.display = "none";
+            icon.textContent = "+";
+            // Restore rounded corners to all sides when collapsed
+            header.style.borderRadius = "5px";
+        }
+    }
+</script>
+{% endblock %}
