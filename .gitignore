@@ -1,0 +1,8 @@
+.gitignore
+.idea
+.venv
+__pycache__
+myportfolio/__pycache__
+portfolio/__pycache__
+portfolio/migrations/__pycache__
+db.sqlite3
