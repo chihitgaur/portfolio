@@ -15,7 +15,8 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-PROFILE_IMAGE_PATH = os.path.join(f"{BASE_DIR}","static", "images", "profile.jpeg")
+# PROFILE_IMAGE_PATH = os.path.join(f"{BASE_DIR}","static", "images", "profile.jpeg")
+PROFILE_IMAGE_PATH = "images/profile.jpeg"
 PYTHON_IMAGE_PATH = os.path.join(f"{BASE_DIR}","static", "images", "python.jpeg")
 SELENIUM_IMAGE_PATH = os.path.join(f"{BASE_DIR}","static", "images", "selenium.jpeg")
 POWERAUTOMATE_IMAGE_PATH = os.path.join(f"{BASE_DIR}","static", "images", "powerautomate.jpeg")
