@@ -56,10 +56,10 @@ QA_RESUME_PATH = os.path.join(f"{BASE_DIR}","static", "resume", "Chihit_Gaur_QA_
 # See https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-@q18^(roex9=f&#+1*f^0t@2nt@%bx8fnru$$-=###g@ss(vfu'
+SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-@q18^(roex9=f&#+1*f^0t@2nt@%bx8fnru$$-=###g@ss(vfu')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = ['chihit-gaur.onrender.com']
 
