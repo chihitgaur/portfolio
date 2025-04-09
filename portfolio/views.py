@@ -8,7 +8,8 @@ from django.views.decorators.csrf import csrf_exempt
 from rapidfuzz import process
 from django.utils.timezone import now
 
-openai_api_key = os.environ.get("OPENAI_API_KEY")
+openai_api_key = str(os.environ.get("OPENAI_API_KEY"))
+
 
 def home(request):
     context = {
@@ -154,6 +155,7 @@ def chatbot_view(request):
             response = handle_chihit_query(prompt)
         else:
             try:
+                print(openai_api_key)
                 chat = ChatOpenAI(temperature=0, model="gpt-4o-mini",openai_api_key=openai_api_key)
                 messages = [HumanMessage(content=prompt)]
                 response = chat(messages).content
