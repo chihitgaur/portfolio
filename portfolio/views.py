@@ -6,8 +6,8 @@ from django.views.decorators.csrf import csrf_exempt
 from rapidfuzz import process
 from django.utils.timezone import now
 
-# Set your OpenAI API key securely
-openai_api_key = ""  # Replace with your actual key or load from environment
+
+# openai_api_key = ""
 
 def home(request):
     context = {
