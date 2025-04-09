@@ -51,6 +51,7 @@ POSTMAN_IMAGE_PATH = "images/postman.jpeg"
 
 RPA_RESUME_PATH = "resume/Chihit_Gaur_RPA_Resume.pdf"
 QA_RESUME_PATH = "resume/Chihit_Gaur_QA_Resume.pdf"
+AI_RESUME_PATH = "resume/Chihit_Gaur_AI_Resume.pdf"
 
 
 # Quick-start development settings - unsuitable for production
