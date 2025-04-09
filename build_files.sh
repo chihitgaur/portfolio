@@ -5,6 +5,7 @@
 set -o errexit
 pip install --upgrade pip
 pip install -r requirements.txt
+pip install -U langchain-community
 # Collect static files
 python manage.py collectstatic --no-input
 
