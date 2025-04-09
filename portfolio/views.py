@@ -1,3 +1,5 @@
+import os
+
 from django.shortcuts import render
 from myportfolio import settings
 from langchain.chat_models import ChatOpenAI
@@ -6,8 +8,7 @@ from django.views.decorators.csrf import csrf_exempt
 from rapidfuzz import process
 from django.utils.timezone import now
 
-
-# openai_api_key = ""
+openai_api_key = os.environ.get("OPENAI_API_KEY")
 
 def home(request):
     context = {
