@@ -7,7 +7,7 @@ from rapidfuzz import process
 from django.utils.timezone import now
 
 # Set your OpenAI API key securely
-openai_api_key = "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"  # Replace with your actual key or load from environment
+openai_api_key = ""  # Replace with your actual key or load from environment
 
 def home(request):
     context = {
